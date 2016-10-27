@@ -14,15 +14,8 @@ class DemoApplicationTests {
 	}
 
 	@Test
-	void actuatorUp() {
-		def htmlResponse = "http://localhost:8080/info".toURL().text
-	}
-
-	@Test
 	void databaseIsPopulated() {
 		print "hola"
 		print "adios"
-
-
 	}
 }

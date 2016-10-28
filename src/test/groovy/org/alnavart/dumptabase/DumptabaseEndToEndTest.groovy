@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class DumptabaseEndToEndTests
+class DumptabaseEndToEndTest
 {
     @LocalServerPort
     int port;

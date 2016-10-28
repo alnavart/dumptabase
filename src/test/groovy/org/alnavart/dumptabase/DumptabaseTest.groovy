@@ -10,13 +10,26 @@ import org.springframework.test.context.junit4.SpringRunner
 class DumptabaseTest
 {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads()
+    {
+    }
 
-	@Test
-	void databaseIsPopulated() {
-		print "hola"
-		print "adios"
-	}
+    @Test
+    void testsConnection()
+    {
+        DumtabaseConection connection =
+            new DumtabaseConection(
+                user: 'user',
+                password: 'password',
+                url: 'url',
+                port: 'port',
+                name: 'databaseName',
+                type: DatabaseTypes.H2)
+        TestConnectionUseCase testConnectionUseCase = new TestConnectionUseCase()
+
+        ConnectionStatusTypes status = testConnectionUseCase.execute connection
+
+        assert status.equals(ConnectionStatusTypes.OK)
+    }
 }
